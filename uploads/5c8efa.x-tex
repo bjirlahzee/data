@@ -1,0 +1,256 @@
+% JANGAN MENGUBAH BAGIAN SKRIP YANG ESENSIAL. SKRIP HARUS DIJAGA UTUH SESUAI DENGAN BENTUK SEPERTI INI. PENULIS HANYA BERTUGAS MENGISI TULISAN PADA BAGIAN YANG TELAH DISEDIAKAN. 
+
+%SANGAT DISARANKAN MENGGUNAKAN COMPILER LUALATEX
+
+
+
+\documentclass[10pt,twoside]{article}
+\usepackage[
+ paperwidth=121.92mm,
+  paperheight=200.66mm,
+  inner=5.1mm,
+  outer=5.1mm,
+  top=8mm,
+  bottom=3mm,
+  headheight=12pt,
+  headsep=4mm,
+  includehead
+  % Terdapat versi ukuran A4 untuk skrip ini: 
+ % paper=a4paper,        
+ % inner=25mm,
+ % outer=20mm,
+ % top=25mm,
+ % bottom=20mm,
+ % headheight=12pt,
+ % headsep=4mm,
+ % includehead
+]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{lettrine}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{url}
+
+\def\UrlBreaks{\do\/\do-\do_\do.\do=\do~\do?}
+\Urlmuskip=0mu plus 3mu
+
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+
+\newcommand{\JournalTitle}{Judul Esai}
+\newcommand{\AuthorName}{Nama Penulis}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO,RE]{\thepage}
+\fancyhead[LE,RO]{\small\scshape \AuthorName}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyhead[LO,RE]{\thepage}
+  \fancyhead[LE,RO]{\small\scshape \AuthorName}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\newcommand{\makejournaltitle}{%
+  \begin{center}
+    \vspace*{1.4cm}
+    \includegraphics[width=0.45\linewidth]{logoepistem.png}\par
+    \vspace{0.4em}
+    {\small\scshape Volume 1\,;\, Issue 1 \quad 15.05.2026\par}
+    \vspace{0.3em}
+    {\LARGE\bfseries \JournalTitle\par}
+    \vspace{0.3em}
+    {\normalsize \AuthorName\par}
+  \end{center}
+  \vspace{0.5em}
+}
+
+\begin{document}
+\sloppy  
+\thispagestyle{fancy}
+\makejournaltitle
+\noindent
+
+\begin{center}
+\textbf{ABSTRAK}
+\end{center}
+
+\lettrine[lines=2, lraise=0.3]{A}{wal} 
+
+
+
+
+
+\section*{\textbf{Dibawah ini adalah contoh cara membuat Tabel menggunakan skrip LaTex}}
+\setlength{\LTleft}{0pt}
+\begin{longtable}{|>{\centering\arraybackslash}p{0.25\linewidth}
+                  |>{\centering\arraybackslash}p{0.25\linewidth}
+                  |>{\raggedright\arraybackslash}p{0.33\linewidth}|}
+\hline
+Komponen Fisis & Parameter Karakteristik & Keterangan Fisis dan Implikasi \\
+\hline
+\endfirsthead
+\multicolumn{3}{r}{\footnotesize\textit{(lanjutan\ldots)}} \\
+\hline
+\endhead
+\hline
+\endfoot
+\textbf{Bentuk \& Struktur} &
+Elipsoid prolat asimetris, \textit{rubble pile}. &
+Menunjukkan akumulasi lembut (\textit{gentle accretion}) di nebula surya
+tanpa proses diferensiasi pemanasan berlebih. \\
+\hline
+
+\textbf{Massa Jenis / Densitas} &
+0{,}5 -- 1{,}0 g/cm\textsuperscript{3} &
+Menandakan porositas tinggi; interior dipenuhi ruang hampa yang
+menghambat perambatan panas. \\
+\hline
+
+\textbf{Albedo Geometris} &
+$\sim$ 0{,}04 &
+Inti dilapisi mantel material organik yang sangat gelap,
+memfasilitasi penyerapan foton matahari yang memicu sublimasi. \\
+\hline
+
+\textbf{Spesies Volatil Utama} &
+H2O, CO, CO2 &
+Rasio kelimpahan CO/CO2 bervariasi bergantung pada kedalaman zona
+formasi dan sejarah sinar kosmik. \\
+\hline
+
+\textbf{Elemen Minor / Debu} &
+C, O, Na, P, Cl, Ba, dll. &
+Membuktikan pelestarian material prataruma dan silikat dari
+cakram sirkumstelar. \\
+\hline
+\end{longtable}
+
+
+
+
+
+\section*{\textbf{Ini adalah contoh kedua dan lebih panjang untuk tabel menggunakan LaTex}}
+
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\setlength{\LTleft}{0pt}
+\begin{longtable}{|>{\raggedright\arraybackslash}p{0.20\linewidth}
+                  |>{\raggedright\arraybackslash}p{0.20\linewidth}
+                  |>{\centering\arraybackslash}p{0.13\linewidth}
+                  |>{\raggedright\arraybackslash}p{0.33\linewidth}|}
+\hline
+Nama Komet (Desainator Resmi) &
+Titik / Tahun Observasi Signifikan &
+Jarak Perihelion (AU) &
+Profil Ciri Optik dan Fenomena Fisik Spesifik yang Teridentifikasi \\
+\hline
+\endfirsthead
+\multicolumn{4}{r}{\footnotesize\textit{(lanjutan\ldots)}} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\textbf{C/2020 F3 (NEOWISE)} &
+Juli 2020 (Satelit NEOWISE) &
+0{,}295 &
+Menampilkan kejelasan visual paling spektakuler untuk lintang utara
+pasca dekade 1990-an. Secara fotometrik memisahkan ekor debu reflektif
+yang merona rona merah muda lebar sejajar dengan filamen ekor emisi gas
+ion biru. \\
+\hline
+
+\textbf{C/2021 A1 (Leonard)} &
+Desember 2021 -- Januari 2022 &
+$-$0{,}61 &
+Komet lintasan hulu retrograde anomali. Menunjukkan fenomena rekoneksi
+ekor dengan morfologi pita ``twisted streamers'', diikuti dekonstruksi
+fragmentasi total pasca lintasan, di mana inti hancur memudar menjadi
+kepingan awan debu (diamati Hubble). \\
+\hline
+
+\textbf{C/2023 P1 (Nishimura)} &
+Agustus -- September 2023 &
+0{,}22 &
+Memancarkan pendar koma radiasi hijau terang neon intrinsik menyolok
+yang digerakkan oleh luapan elemen karbon diatomik; penemuan bersejarah
+astrofotografer amatir. Terpantau korona STEREO dan Parker Probe melesat
+mendekat. \\
+\hline
+
+\textbf{12P/Pons-Brooks} &
+Pertengahan 2024 (historis 1812) &
+0{,}78 &
+Tipe komet keluarga Halley ($\sim$71 tahun). Fenomena lonjakan
+vulkanisme termal ekstrem (\textit{cryovolcanic outbursts}) mencerahkan
+koma 100x mendadak. Kontraksi morfologi gas debu memproduksi siluet
+menakutkan berbentuk kurva tapal kuda/sepasang ``tanduk iblis''. \\
+\hline
+
+\textbf{C/2023 A3 (Tsuchinshan-ATLAS)} &
+Oktober 2024 &
+0{,}39 &
+Migrasi masif periode ekstrem rute Oort Cloud ($>$80.000 tahun).
+Meledak pada ambang pendar fotometrik magnitudo $-3$; merekam foto
+silang limb bumi di ISS dengan sayap panjang profil sayap debu dan
+pedang lurus ion tail. \\
+\hline
+
+\textbf{C/2025 R3 (PanSTARRS)} &
+April 2026 (Proyek PanSTARRS) &
+0{,}499 &
+Diidentifikasi memotong konstelasi ekuatorial (``Komet Orion'') dengan
+sapuan jarum ekor tipis memanjang; diperkuat amplifikasi hiper-visual
+pendaran koma sianogen terang via mekanisme hamburan spektrum
+\textit{forward scattering} yang kuat sejajar garis Bumi-Matahari. \\
+\hline
+
+\textbf{1P/Halley} &
+$-$240 SM; Observasi Probe 1986 &
+0{,}586 &
+Prototipe arketip sejarah astrometri manusia. Subjek eksperimental
+pendaratan lintas armada satelit antarplanet (misi Giotto), menegaskan
+bukti dokumentasi perdana eksistensi formasi asimetris pekat organik dan
+lobus retakan geologi pada inti kometari gelap. \\
+\hline
+
+\textbf{C/1996 B2 (Hyakutake)} &
+Maret 1996 (Binokular amatir) &
+0{,}23 &
+Menyajikan pendekatan perige melintasi orbit bumi hiper-dekat monumental
+historis (0{,}102 AU/15 juta km). Kepala komet gas membengkak visual 4x
+radius piringan Bulan penuh berhiaskan iluminasi molekul hijau-biru
+diatomik (C2) dengan ekor raksasa jam matahari 60 derajat busur di zenit
+utara. \\
+\hline
+\end{longtable}
+}
+
+
+
+
+
+
+
+
+\newpage
+\begin{center}
+\textbf{Daftar Pustaka}
+\end{center}
+{\setlength{\parindent}{0pt}
+
+
+}
+
+\end{document}
